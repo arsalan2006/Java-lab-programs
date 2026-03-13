@@ -1,0 +1,37 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class ImageTextAWT extends Frame {
+
+    Image img;
+
+    ImageTextAWT() {
+        setTitle("AWT Image and Text Display");
+        setSize(500, 400);
+        setVisible(true);
+
+        // Load image
+        img = Toolkit.getDefaultToolkit().getImage("sample.jpg");
+
+        // Close window event
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                dispose();
+                System.exit(0);
+            }
+        });
+    }
+
+    public void paint(Graphics g) {
+        // Display text
+        g.setFont(new Font("Arial", Font.BOLD, 24));
+        g.drawString("Welcome to AWT Application", 80, 80);
+
+        // Display image
+        g.drawImage(img, 150, 120, 200, 200, this);
+    }
+
+    public static void main(String[] args) {
+        new ImageTextAWT();
+    }
+}
