@@ -1,0 +1,16 @@
+interface Bank {
+    void rateOfInterest();
+}
+
+class Student implements Bank {
+
+    public void rateOfInterest() {
+        System.out.println("Rate of Interest = 7%");
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+
+        s.rateOfInterest();
+    }
+}
