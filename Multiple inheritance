@@ -1,0 +1,25 @@
+interface Student {
+    void studentData();
+}
+
+interface Department {
+    void deptData();
+}
+
+class College implements Student, Department {
+
+    public void studentData() {
+        System.out.println("Student Name: Arsalan");
+    }
+
+    public void deptData() {
+        System.out.println("Department: CSE");
+    }
+
+    public static void main(String[] args) {
+        College c = new College();
+
+        c.studentData();
+        c.deptData();
+    }
+}
