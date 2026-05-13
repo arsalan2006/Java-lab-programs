@@ -1,0 +1,24 @@
+class Circle {
+    int x, y;
+    double radius;
+
+    Circle(int x, int y, double r) {
+        this.x = x;
+        this.y = y;
+        radius = r;
+    }
+
+    void display() {
+        double area = 3.14 * radius * radius;
+
+        System.out.println("Centre: (" + x + "," + y + ")");
+        System.out.println("Radius: " + radius);
+        System.out.println("Area: " + area);
+    }
+
+    public static void main(String[] args) {
+        Circle c = new Circle(2, 3, 5);
+
+        c.display();
+    }
+}
