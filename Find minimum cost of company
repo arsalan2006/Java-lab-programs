@@ -1,0 +1,27 @@
+class Tender {
+    String company;
+    int cost;
+
+    Tender(String c, int co) {
+        company = c;
+        cost = co;
+    }
+
+    public static void main(String[] args) {
+
+        Tender t1 = new Tender("ABC", 5000);
+        Tender t2 = new Tender("XYZ", 4500);
+        Tender t3 = new Tender("PQR", 6000);
+
+        Tender min = t1;
+
+        if(t2.cost < min.cost)
+            min = t2;
+
+        if(t3.cost < min.cost)
+            min = t3;
+
+        System.out.println("Minimum Cost Company: " + min.company);
+        System.out.println("Cost: " + min.cost);
+    }
+}
