@@ -1,0 +1,25 @@
+class Item {
+    int id;
+    String name;
+
+    Item(int i, String n) {
+        id = i;
+        name = n;
+    }
+
+    void display() {
+        System.out.println(id + " " + name);
+    }
+
+    public static void main(String[] args) {
+        Item arr[] = new Item[3];
+
+        arr[0] = new Item(101, "Pen");
+        arr[1] = new Item(102, "Book");
+        arr[2] = new Item(103, "Pencil");
+
+        for(Item i : arr) {
+            i.display();
+        }
+    }
+}
